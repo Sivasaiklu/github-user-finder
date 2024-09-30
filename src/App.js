@@ -5,6 +5,7 @@ import RepositoryList from './RepositoryList';
 import fetchUserData from './fetchUserData';
 import FectchUserRepository from './FectchUserRepository';
 import './index.css'
+import Footer from './Footer';
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -42,6 +43,8 @@ function App() {
       {userData && <UserProfile userData={userData}  />}
       {userRepos && <RepositoryList userRepos={userRepos} />}
       {error && <p style={{color:'gold', fontSize:'28px', fontWeight:'bold' }}>{error}</p>}
+
+      <Footer/>
     </div>
     
   );
